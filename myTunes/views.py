@@ -1,9 +1,6 @@
 from django.shortcuts import render
+from .models import Album, Users
 
-# Create your views here.
-from django.db import modelsfrom django.contrib.auth.models import AbstractUser
-
-
-def list_album[request]:
-  mymusic = Album.objects.all(
-  return render (request"mymusic/list_albums.html",{"mymusic": mymusic})
+def index(request):
+  mymusic = Album.objects.all()
+  return render (request, "myTunes/list_albums.html", context={"myTunes": mymusic})

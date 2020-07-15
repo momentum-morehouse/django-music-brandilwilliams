@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>All Albums</h1>
+
+
+<div class="flex flex-wrap">
+  {% for album in myTunes %}
+  <div class="w-33 pa3">
+    <h2>{{ myTunes.albumtitle }}</h2>
+
+
+
+    {% if myTunes.artistname %}
+    <div class="flex">
+      <div class="pr2"></div>
+      <div>{{ myTunes.artistname }}</div>
+    </div>
+    {% endif %}
+
+    {% if myTunes.releasedate %}
+    <div class="flex">
+      <div class="pr2"></div>
+      <div>{{ myTunes.releasedate }}</div>
+    </div>
+    {% endif %}
+
+    
+  </div>
+  {% endfor %}
+</div>  
+{% endblock %}
+
