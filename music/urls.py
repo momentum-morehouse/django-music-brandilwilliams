@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.conf import settings
 from django.urls import include, path
-from myTunes import views as album_views
+from myTunes import views as myTunes_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', album_views.index, name='home')
+    path('albums',myTunes_views.index, name='list_albums')
 ]
 
 if settings.DEBUG:

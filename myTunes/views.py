@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Album, Users
+from .models import Album
 
 def index(request):
-  mymusic = Album.objects.all()
-  return render (request, "myTunes/list_albums.html", context={"myTunes": mymusic})
+  albums = Album.objects.all()
+  return render (request, "myTunes/list_albums.html", context={"albums": albums})

@@ -5,23 +5,24 @@
 
 
 <div class="flex flex-wrap">
-  {% for album in myTunes %}
+  {% for album in albums %}
+  <img src="{{album.image_url}}">
   <div class="w-33 pa3">
-    <h2>{{ myTunes.albumtitle }}</h2>
+    <h2>{{ album.artist_name }}</h2>
 
 
 
-    {% if myTunes.artistname %}
+    {% if album.album_title %}
     <div class="flex">
       <div class="pr2"></div>
-      <div>{{ myTunes.artistname }}</div>
+      <div>{{ album.album_title }}</div>
     </div>
     {% endif %}
 
-    {% if myTunes.releasedate %}
+    {% if album.release_date %}
     <div class="flex">
       <div class="pr2"></div>
-      <div>{{ myTunes.releasedate }}</div>
+      <div>{{ album.release_date }}</div>
     </div>
     {% endif %}
 
